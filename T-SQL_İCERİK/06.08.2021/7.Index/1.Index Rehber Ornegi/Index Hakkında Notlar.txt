@@ -1,0 +1,4 @@
+Index ler Binary Tree Algoritmasını kullanır
+
+Index Sayfası ile Data Sayfası Ayrıdır.Index sayfasında arama yapıp kullanıcının id buluruz ondan sonra id yola cıkarak diğer bilgilerini getiririz bunun teknik adı => sql server page pick up. bizim ad 'a gore sirali indeximiz var ise ama biz telel gore arama yapmak istersek o zaman yine tek tek butun satırları dolasacagız bunun yerine telefon numaralarınıda indexlememiz gerekir.
+Bir tabloda birden fazla index olabilir ama bir tablonun bir tane primary key Id si olur => primary key => clustred index dir => non-clustred index vardır (ad,tel vb.)

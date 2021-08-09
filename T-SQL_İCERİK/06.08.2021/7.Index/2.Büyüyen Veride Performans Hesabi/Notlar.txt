@@ -1,0 +1,1 @@
+Index Indexin işleme gore çok verimlidir ve sql de genelde sorgulama yapıldıgından index kullanmaz isek çok verimsiz sistemler gerçekleştirmiş oluruz

@@ -1,0 +1,22 @@
+Mssql de Execute un yanında bulunan 'Display Estimated Execution Plan'(tahmini yürütme planın göster) bu işlem ile verdiğimiz sorguyu nasıl bir planda çalıştırdıgını gosterir.
+
+Table Scan Yapıyorum dediyse => Table scan dağınık bir masada bir isim aradıgı anlamına gelir
+
+Sql server 'ın en küçük yapı taşı page dir . pageler 8 kilobyte lık yer kaplar.Datalar pageler halinde tutulur. => En verimsiz en kötü arama şeklidir.Peki neden table scan yapar bulundugu tabloda primary key yok ise table scan yapar.
+
+Eğer primary key yapar isek => Clustred Index Scan ' den arama yapar.
+
+
+Index 'in amacı mümkün oldugunca okuma sayısını azaltmaktır.
+
+
+SET STATISTICS IO ON => ne kadar okuma sayısı yaptıgını getirir. Sql komutunun başına koyulur
+
+Sql server da bir tablonun boyutuna bakmak istediğimizde şu komut vardır => SP_SPACEUSED 'CUSTOMERS'
+
+Sql Sever 'in onerilerini görmek için şu işlem yapılır => Select * From Customers where NameSurmname = 'Ömer Çolakoğlu' => Display Estimated Execution Plan butonuna tıklar isek orada missing index alanını gorürüz
+
+
+Index Oluşturma Scripti => Create NonClustered Index IX1 On Customers(NameSurname)
+
+Index siz Okuma sayısı 27084 => index li 6 dır

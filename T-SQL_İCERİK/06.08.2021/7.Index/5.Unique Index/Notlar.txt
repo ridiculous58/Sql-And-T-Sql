@@ -1,0 +1,3 @@
+Sql Server bir index e gore arama yapmaya başladıgında bulunun ilk değer tablonunu ilk satırındaysa aramayı bırakmaz devam eder Biz eğer unique bir alana sahip isek Unique index yapar isek sql server aramayı ilk satır da bırak demiş oluruz.
+
+Ornek olarak => email,tcno,telno

@@ -1,0 +1,14 @@
+İndex li bir datalara yeni kayıtlar geldikçe sona eklenir ve bu durum bir zaman sonra index bozulmalarına neden olur .
+
+Bu durumu çözecek yöntem ise 
+
+Sql server en küçük yapı taşı page lerdir bu pageler 8 kb lık yer tutar biz eğer pageleri sonradan data ekleneceği için bosluklu yapar isek yeni gelen kayıt page eklenir
+ve Index imiz bozulmamış olur buna Fill Factor (Doluluk Oranını) denir.
+
+
+Bu sırasız bozuk yapıya Fragmentation denir
+
+Her page i %40 lık bir boşluk yaparak Index işleminin bozulma suresini uzatabiliriz . Yine de bozulma olucak tabi bunuda istatislikleri update ederek güncelleriz ama bu maliyetli ve zaman alan bir işlemdir.
+
+
+Fill Factor (Doluluk Oranını) %40 dolu yapar isek bu durumu çözmüş oluruz

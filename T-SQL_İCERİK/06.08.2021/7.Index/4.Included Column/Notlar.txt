@@ -1,0 +1,18 @@
+Included Column 
+
+Index Seek => binary tree algoritmasını kullanarak arama yapar
+Key Lookup => Non-clustered da buldugumuz sonuçtan sonra alınan id değerininden sonra genel tabloda bidaha rama yapılır bu clustered Index aramasıdır kullanıcın diğer bilgileri getirilir.
+
+bu işlemi nasıl onleriz eğer istemiyorsak :
+Select * from Customers Where NameSurname = "Ömer Çolakoğlu" yapmak yerine ,
+Select NameSurname from Customers Where NameSurname = "Ömer Çolakoğlu" yazar isek Key lookup yapmamış oluruz
+
+peki biz bu keylookup bı nasıl onleriz bunun çözümü Included Column dur.
+
+Included Column Nedir ?
+Included column bir Index yaparken sadece index yapılan alan (NameSurname) değilde diğer alanlarda bu index e eklenir. Bu sayede key Lookup engellenmiş olur
+
+
+Peki Index Alanı Yer Kaplamıyor mu ? tabiki kaplıyor  
+
+Index Tablonun bire bir kopyasını yapar
